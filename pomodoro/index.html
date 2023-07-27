@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Online Timer - OntimeTimer</title>
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="/" />
+
+
+    <meta name="description"
+        content="Online timer. Set the hour, minute and second, and start. You can set the date, hour, minute and second to count down to or from a specific time.">
+    <meta name="keywords"
+        content="Timer, Online Timer, Timer Online, Holiday, Weekend, timer, online, taimeo, onalarmclocktimer">
+    <meta name="copyright" content="Copyright (c) K M Omite Hasan">
+
+    <meta property="og:title" content="Online Timer - onalarmclocktimer">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="onalarmclocktimer">
+    <meta property="og:url" content="/pomodoro/">
+    <meta property="og:description"
+        content="Online timer. Set the hour, minute and second, and start. You can set the date, hour, minute and second to count down to or from a specific time.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@onalarmclocktimer">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/res/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/res/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/res/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/res/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/res/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/res/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/res/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/res/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/res/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/res/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/res/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/res/icon/favicon-16x16.png">
+    <link rel="manifest" href="/res/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/res/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="K M Omite Hasan">
+    <!-- <meta name="naver-site-verification" content="5c7992b2e06dd7bde0fc53c4bf43fd47fbfac101" /> -->
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="res/js/circletimer/dist/circletimer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script src="res/js/howler/dist/howler.js"></script>
+    <script src="res/js/js_cookie_30/js.cookie.js"></script>
+
+    <link href="res/css/reset.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="res/css/default.css" rel="stylesheet">
+    <link href="res/js/circletimer/dist/circletimer.css" rel="stylesheet">
+    <link href="res/css/fontawesome/css/all.css" rel="stylesheet">
+    <link href="res/css/flag-icon-css-master/css/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+
+    <link href="res/css/ontimetimer.css" rel="stylesheet">
+
+    <style>
+        .hide {
+            display: none;
+            opacity: 0;
+        }
+
+        .show {
+            display: block;
+            opacity: 1;
+        }
+
+        #Anutrickz_translateBTN {
+            position: absolute;
+            top: 17px;
+            right: 70px;
+            z-index: 99;
+        }
+
+        #Anutrickz_translateBTN svg {
+            width: 24px;
+            height: 24px
+        }
+
+        #ATLang_list {
+            width: 10rem;
+            right: 0px;
+            box-shadow: 0 0 15px rgb(0 0 0 / 7%);
+            border-radius: 0.5rem;
+            position: absolute;
+            z-index: 9;
+            background: #fff;
+            top: 100%;
+            color: #000;
+        }
+
+        #ATLang_list li {
+            list-style: none;
+            line-height: 1.5rem;
+            font-size: .875rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+
+        #ATLang_list ul {
+            margin: 0 auto
+        }
+
+        #Anutrickz_translateBTN.hover #ATLang_list {
+            display: block
+        }
+
+        .language-active {
+            color: green;
+        }
+
+        .language-list {
+            cursor: pointer;
+            margin: 3px;
+            align-items: center
+        }
+
+        #goog-gt-tt,
+        .goog-te-banner-frame {
+            display: none !important
+        }
+    </style>
+
+</head>
+
+<body class="open-right-sidebar">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210274430-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-210274430-1');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4JEEG596V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-G4JEEG596V');
+    </script>
+
+
+    <!-- Header -->
+    <div id="header">
+        <nav class="navbar navbar-default navbar-fixed-top am-top-header">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="page-title">
+                        <span>Online Alarm Clock - onalarmclocktimer</span>
+                    </div>
+                    <a href="javascript:;" class="am-toggle-left-sidebar navbar-toggle collapsed"><span
+                            class="icon-bar"><span></span><span></span><span></span></span></a>
+                    <a href="/" class="navbar-brand">onalarmclock<span>timer</span></a>
+                </div>
+                <!-- <a href="javascript:;" class="am-toggle-right-sidebar" title="Settings" data-toggle="tooltip"
+                    data-placement="bottom"><span class="icon ci-config"></span></a><a href="javascript:;"
+                    data-toggle="collapse" data-target="#am-navbar-collapse"
+                    class="am-toggle-top-header-menu collapsed"><span class="icon ci-angle-down"></span></a>
+                <div id="am-navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right am-icons-nav">
+                        <li class="dropdown">
+                            <a href="javascript:;" role="button" title="Night Mode" data-toggle="tooltip"
+                                data-placement="bottom" id="btn-night-mode"><span class="icon ci-contrast"
+                                    id="icon-night-mode"></span></a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div id='Anutrickz_translateBTN'><svg aria-hidden='true' preserveAspectRatio='xMidYMid meet' role='img'
+                        viewBox='0 0 36 36'>
+                        <path class='clr-i-outline clr-i-outline-path-1'
+                            d='M30 3H14v5h2V5h14c.6 0 1 .4 1 1v11c0 .6-.4 1-1 1H17v7h-5.3L8 27.9V25H5c-.6 0-1-.4-1-1V13c0-.6.4-1 1-1h13v-2H5c-1.7 0-3 1.3-3 3v11c0 1.7 1.3 3 3 3h1v5.1l6.3-5.1H19v-7h11c1.7 0 3-1.3 3-3V6c0-1.7-1.3-3-3-3z'
+                            fill='currentColor'></path>
+                        <path class='clr-i-outline clr-i-outline-path-2'
+                            d='M6.2 22.9h2.4l.6-1.6h3.1l.6 1.6h2.4L11.9 14H9.5l-3.3 8.9zm4.5-6.4l1 3.1h-2l1-3.1z'
+                            fill='currentColor'>
+                        </path>
+                        <path class='clr-i-outline clr-i-outline-path-3'
+                            d='M20 17c1.1 0 2.6-.3 4-1c1.4.7 3 1 4 1v-2s-1 0-2.1-.4c1.2-1.2 2.1-3 2.1-5.6V8h-3V6h-2v2h-3v2h5.9c-.2 1.8-1 2.9-1.9 3.6c-.6-.5-1.2-1.2-1.6-2.1h-2.1c.4 1.3 1 2.3 1.8 3.1c-1 .4-1.9.4-2.1.4v2z'
+                            fill='currentColor'></path>
+                    </svg>
+                    <div class='hide' id='ATLang_list'>
+                        <ul>
+                            <li class='language-list' data-google-lang='en'>English</li>
+                            <li class='language-list' data-google-lang='bn'>ব&#2494;&#2434;ল&#2494;</li>
+                            <li class='language-list' data-google-lang='hi'>ह&#2367;न&#2381;द&#2368;</li>
+                            <li class='language-list' data-google-lang='ta'>தம&#3007;ழ&#3021;</li>
+                            <li class='language-list' data-google-lang='mr'>मर&#2366;ठ&#2368;</li>
+                            <li class='language-list' data-google-lang='id'>bahasa Indonesia</li>
+                            <li class='language-list' data-google-lang='fr'>Français</li>
+                            <li class='language-list' data-google-lang='zh'>中国人</li>
+                            <li class='language-list' data-google-lang='ur'>اردو</li>
+                            <li class='language-list' data-google-lang='or'>Oriya</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- <span class="lang_sel">
+            english
+
+            <i class="fas fa-chevron-down"></i>
+        </span> -->
+        <div class="lang_menu">
+            <div class="lang_tt_wrap">
+                <div class="lang_tt">language</div>
+                <div class="lang_close_btn"><i class="fas fa-times"></i></div>
+            </div>
+
+            <a class="lang_item" href="/en">english</a>
+            <a class="lang_item" href="/pt">Português</a>
+            <a class="lang_item" href="/th">ภาษาไทย</a>
+            <a class="lang_item" href="/es">Español</a>
+            <div class="clear"></div>
+
+            <a class="lang_item" href="/id">Bahasa Indonesia</a>
+            <a class="lang_item" href="/ar">العربية</a>
+            <a class="lang_item" href="/hi">हिंदी</a>
+            <a class="lang_item" href="/tr">Türkçe</a>
+            <div class="clear"></div>
+
+            <a class="lang_item" href="/cn">简体中文</a>
+            <a class="lang_item" href="/tw">繁體中文 (台灣)</a>
+            <a class="lang_item" href="/vi">Tiếng Việt</a>
+            <a class="lang_item" href="/ru">Русский</a>
+            <div class="clear"></div>
+
+            <a class="lang_item" href="/it">Italiano</a>
+            <a class="lang_item" href="/pl">Polski</a>
+            <a class="lang_item" href="/sv">Svenska</a>
+            <a class="lang_item" href="/da">Dansk</a>
+            <div class="clear"></div>
+
+            <a class="lang_item" href="/ko">한국어</a>
+            <a class="lang_item" href="/de">Deutsch</a>
+            <a class="lang_item" href="/nl">Nederlands</a>
+            <a class="lang_item" href="/fr">Français</a>
+            <div class="clear"></div>
+
+            <a class="lang_item" href="/ja">日本語</a>
+            <div class="clear"></div>
+        </div>
+
+        <div class="am-left-sidebar">
+            <div class="content">
+                <div class="am-logo">
+                </div>
+                <ul class="sidebar-elements">
+                    <li class="parent">
+                        <a href="/" id="link-alarm"><i class="icon ci-alarm"></i><span>Alarm&nbsp;Clock</span></a>
+                    </li>
+                    <li class="parent">
+                        <a href="/timer/" id="link-timer"><i class="icon ci-timer"></i><span>Timer</span></a>
+                    </li>
+                    <li class="parent">
+                        <a href="/stopwatch/"><i class="icon ci-stopwatch"></i><span>Stopwatch</span></a>
+                    </li>
+                    <li class="parent">
+                        <a href="/time/"><i class="icon ci-clock"></i><span>Time</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="/pomodoro/"><i class="icon ci-timer"></i><span>Pomodoro</span></a>
+                    </li>
+                </ul>
+                <!--Sidebar bottom content-->
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Example -->
+    <div id="content">
+        <div class="clock">
+            <div class="outer-clock-face">
+                <div class="marking marking-one"></div>
+                <div class="marking marking-two"></div>
+                <div class="marking marking-three"></div>
+                <div class="marking marking-four"></div>
+                <div class="inner-clock-face">
+                    <div style="width:100%;height:100%;position:relative;">
+                        <div id="time-elapsed"
+                            style="color:#fdfdfd;font-size:40px;width:100%;height:100%;text-align:center;padding-top:calc(50% - 20px);position:absolute;top:0px;left:0px;z-index:99999;font-weight:bold;-webkit-text-stroke: 1px #000;">
+                            03:21</div>
+
+
+                        <div id="ontimetimer" style="position:absolute;z-index:9999;top:-3px;left:-3px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--//<p>Time Elapsed: <span id="time-elapsed">0</span>ms</p>-->
+        <div class="ott_btn_box">
+            <button id="start" alt="start"><i class="fas fa-play"></i></button>
+            <button id="pause" alt="pause"><i class="fas fa-pause"></i></button>
+            <button id="stop" alt="stop"><i class="fas fa-stop"></i></button>
+            <button id="setting" alt="Settings"><i class="fas fa-cog"></i></button>
+        </div>
+
+        <div class="setbox">
+            <div class="setbox_title">Settings</div>
+            <div class="set_time">
+                <div class="set_tt">time</div>
+                <div class="set_pn">
+                    <select id="sel_hour">
+                        <option value='0'>00</option>
+                        <option value='1'>01</option>
+                        <option value='2'>02</option>
+                        <option value='3'>03</option>
+                        <option value='4'>04</option>
+                        <option value='5'>05</option>
+                        <option value='6'>06</option>
+                        <option value='7'>07</option>
+                        <option value='8'>08</option>
+                        <option value='9'>09</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                        <option value='13'>13</option>
+                        <option value='14'>14</option>
+                        <option value='15'>15</option>
+                        <option value='16'>16</option>
+                        <option value='17'>17</option>
+                        <option value='18'>18</option>
+                        <option value='19'>19</option>
+                        <option value='20'>20</option>
+                        <option value='21'>21</option>
+                        <option value='22'>22</option>
+                        <option value='23'>23</option>
+                        <option value='24'>24</option>
+                    </select>
+                    :
+                    <select id="sel_minute">
+                        <option value='0'>00</option>
+                        <option value='1'>01</option>
+                        <option value='2'>02</option>
+                        <option value='3'>03</option>
+                        <option value='4'>04</option>
+                        <option value='5'>05</option>
+                        <option value='6'>06</option>
+                        <option value='7'>07</option>
+                        <option value='8'>08</option>
+                        <option value='9'>09</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                        <option value='13'>13</option>
+                        <option value='14'>14</option>
+                        <option value='15'>15</option>
+                        <option value='16'>16</option>
+                        <option value='17'>17</option>
+                        <option value='18'>18</option>
+                        <option value='19'>19</option>
+                        <option value='20'>20</option>
+                        <option value='21'>21</option>
+                        <option value='22'>22</option>
+                        <option value='23'>23</option>
+                        <option value='24'>24</option>
+                        <option value='25'>25</option>
+                        <option value='26'>26</option>
+                        <option value='27'>27</option>
+                        <option value='28'>28</option>
+                        <option value='29'>29</option>
+                        <option value='30'>30</option>
+                        <option value='31'>31</option>
+                        <option value='32'>32</option>
+                        <option value='33'>33</option>
+                        <option value='34'>34</option>
+                        <option value='35'>35</option>
+                        <option value='36'>36</option>
+                        <option value='37'>37</option>
+                        <option value='38'>38</option>
+                        <option value='39'>39</option>
+                        <option value='40'>40</option>
+                        <option value='41'>41</option>
+                        <option value='42'>42</option>
+                        <option value='43'>43</option>
+                        <option value='44'>44</option>
+                        <option value='45'>45</option>
+                        <option value='46'>46</option>
+                        <option value='47'>47</option>
+                        <option value='48'>48</option>
+                        <option value='49'>49</option>
+                        <option value='50'>50</option>
+                        <option value='51'>51</option>
+                        <option value='52'>52</option>
+                        <option value='53'>53</option>
+                        <option value='54'>54</option>
+                        <option value='55'>55</option>
+                        <option value='56'>56</option>
+                        <option value='57'>57</option>
+                        <option value='58'>58</option>
+                        <option value='59'>59</option>
+                    </select>
+                    :
+                    <select id="sel_second">
+                        <option value='0'>00</option>
+                        <option value='1'>01</option>
+                        <option value='2'>02</option>
+                        <option value='3'>03</option>
+                        <option value='4'>04</option>
+                        <option value='5'>05</option>
+                        <option value='6'>06</option>
+                        <option value='7'>07</option>
+                        <option value='8'>08</option>
+                        <option value='9'>09</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                        <option value='13'>13</option>
+                        <option value='14'>14</option>
+                        <option value='15'>15</option>
+                        <option value='16'>16</option>
+                        <option value='17'>17</option>
+                        <option value='18'>18</option>
+                        <option value='19'>19</option>
+                        <option value='20'>20</option>
+                        <option value='21'>21</option>
+                        <option value='22'>22</option>
+                        <option value='23'>23</option>
+                        <option value='24'>24</option>
+                        <option value='25'>25</option>
+                        <option value='26'>26</option>
+                        <option value='27'>27</option>
+                        <option value='28'>28</option>
+                        <option value='29'>29</option>
+                        <option value='30'>30</option>
+                        <option value='31'>31</option>
+                        <option value='32'>32</option>
+                        <option value='33'>33</option>
+                        <option value='34'>34</option>
+                        <option value='35'>35</option>
+                        <option value='36'>36</option>
+                        <option value='37'>37</option>
+                        <option value='38'>38</option>
+                        <option value='39'>39</option>
+                        <option value='40'>40</option>
+                        <option value='41'>41</option>
+                        <option value='42'>42</option>
+                        <option value='43'>43</option>
+                        <option value='44'>44</option>
+                        <option value='45'>45</option>
+                        <option value='46'>46</option>
+                        <option value='47'>47</option>
+                        <option value='48'>48</option>
+                        <option value='49'>49</option>
+                        <option value='50'>50</option>
+                        <option value='51'>51</option>
+                        <option value='52'>52</option>
+                        <option value='53'>53</option>
+                        <option value='54'>54</option>
+                        <option value='55'>55</option>
+                        <option value='56'>56</option>
+                        <option value='57'>57</option>
+                        <option value='58'>58</option>
+                        <option value='59'>59</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="set_sound">
+                <div class="set_tt">sound</div>
+                <div class="set_pn">
+                    <select id="set_sound_select">
+                        <option value="0">alarm 1</option>
+                        <option value="1">alarm 2</option>
+                        <option value="2">alarm 3</option>
+                        <option value="3">alarm 4</option>
+                        <option value="4">alarm 5</option>
+                        <option value="5">alarm 6</option>
+                        <option value="6">alarm 7</option>
+                        <option value="7">alarm 8</option>
+                        <option value="8">alarm 9</option>
+                        <option value="9">alarm 10</option>
+
+                        <option value="10">music 1</option>
+                        <option value="11">music 2</option>
+                        <option value="12">music 3</option>
+                        <option value="13">music 4</option>
+                        <option value="14">music 5</option>
+                        <option value="15">music 6</option>
+                        <option value="16">music 7</option>
+                        <option value="17">music 8</option>
+                        <option value="18">music 9</option>
+                        <option value="19">music 10</option>
+                    </select>
+                    <span id="set_sound_play_btn" data="0"><i class="fas fa-play"></i></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="set_loop">
+                <div class="set_tt">repeat</div>
+                <div class="set_pn">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="is_loop_sw"
+                            tabindex="0" checked>
+                        <label class="onoffswitch-label" for="is_loop_sw"></label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="set_button" data="ok">OK</div>
+        </div>
+
+
+
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7733199374498706"
+            crossorigin="anonymous"></script>
+
+
+        <div class="timer_select_box">
+            <div class="ts_box_a">
+                <a href="/en/timer/1second">1 second timer</a><br>
+                <a href="/en/timer/2seconds">2 seconds timer</a><br>
+                <a href="/en/timer/3seconds">3 seconds timer</a><br>
+                <a href="/en/timer/4seconds">4 seconds timer</a><br>
+                <a href="/en/timer/5seconds">5 seconds timer</a><br>
+                <a href="/en/timer/10seconds">10 seconds timer</a><br>
+                <a href="/en/timer/15seconds">15 seconds timer</a><br>
+                <a href="/en/timer/20seconds">20 seconds timer</a><br>
+                <a href="/en/timer/25seconds">25 seconds timer</a><br>
+                <a href="/en/timer/30seconds">30 seconds timer</a><br>
+                <a href="/en/timer/35seconds">35 seconds timer</a><br>
+                <a href="/en/timer/40seconds">40 seconds timer</a><br>
+                <a href="/en/timer/45seconds">45 seconds timer</a><br>
+                <a href="/en/timer/50seconds">50 seconds timer</a><br>
+                <a href="/en/timer/55seconds">55 seconds timer</a><br>
+                <a href="/en/timer/60seconds">60 seconds timer</a><br>
+            </div>
+
+            <div class="ts_box_b">
+                <a href="/en/timer/1minute">1 minute timer</a><br>
+                <a href="/en/timer/2minutes">2 minutes timer</a><br>
+                <a href="/en/timer/3minutes">3 minutes timer</a><br>
+                <a href="/en/timer/4minutes">4 minutes timer</a><br>
+                <a href="/en/timer/5minutes">5 minutes timer</a><br>
+                <a href="/en/timer/10minutes">10 minutes timer</a><br>
+                <a href="/en/timer/15minutes">15 minutes timer</a><br>
+                <a href="/en/timer/20minutes">20 minutes timer</a><br>
+                <a href="/en/timer/25minutes">25 minutes timer</a><br>
+                <a href="/en/timer/30minutes">30 minutes timer</a><br>
+                <a href="/en/timer/35minutes">35 minutes timer</a><br>
+                <a href="/en/timer/40minutes">40 minutes timer</a><br>
+                <a href="/en/timer/45minutes">45 minutes timer</a><br>
+                <a href="/en/timer/55minutes">50 minutes timer</a><br>
+                <a href="/en/timer/55minutes">55 minutes timer</a><br>
+                <a href="/en/timer/60minutes">60 minutes timer</a><br>
+            </div>
+
+            <div class="ts_box_c">
+                <a href="/en/timer/1hour">1 hour timer</a><br>
+                <a href="/en/timer/2hours">2 hours timer</a><br>
+                <a href="/en/timer/3hours">3 hours timer</a><br>
+                <a href="/en/timer/4hours">4 hours timer</a><br>
+                <a href="/en/timer/5hours">5 hours timer</a><br>
+                <a href="/en/timer/6hours">6 hours timer</a><br>
+                <a href="/en/timer/7hours">7 hours timer</a><br>
+                <a href="/en/timer/8hours">8 hours timer</a><br>
+                <a href="/en/timer/9hours">9 hours timer</a><br>
+                <a href="/en/timer/10hours">10 hours timer</a><br>
+                <a href="/en/timer/12hours">12 hours timer</a><br>
+                <a href="/en/timer/15hours">15 hours timer</a><br>
+                <a href="/en/timer/18hours">18 hours timer</a><br>
+                <a href="/en/timer/20hours">20 hours timer</a><br>
+                <a href="/en/timer/24hours">24 hours timer</a><br>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="timer_info_box">
+            <h3>What is an onalarmclocktimer?</h3>
+            <h5>A visualized timer that displays the past time in white and the remaining time in black. Use it as your
+                own timer with various time settings and notification sound settings. Manage time with an
+                onalarmclocktimer
+                that intuitively visualizes time.</h5>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox" style="text-align:center;"></div>
+
+    <div class="timer_copyright_box">© 2023 onalarmclocktimer</div>
+
+
+    <script>
+        //<![CDATA[
+        function _0x95f84b(_0x12ced9, _0x314ce3) { return _0x1fa9(_0x12ced9 - 0x47, _0x314ce3); } function _0x1fa9(_0x4db848, _0x3a576c) { var _0x1c66cd = _0x1c66(); return _0x1fa9 = function (_0x1fa995, _0x4c0157) { _0x1fa995 = _0x1fa995 - 0x1cc; var _0x1ab61f = _0x1c66cd[_0x1fa995]; if (_0x1fa9['RwXSHK'] === undefined) { var _0x27dbe6 = function (_0x30916b) { var _0x4a1139 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/='; var _0x683459 = '', _0x3084f7 = ''; for (var _0x43584b = 0x0, _0x3e01a6, _0x33b664, _0x5a5f5e = 0x0; _0x33b664 = _0x30916b['charAt'](_0x5a5f5e++); ~_0x33b664 && (_0x3e01a6 = _0x43584b % 0x4 ? _0x3e01a6 * 0x40 + _0x33b664 : _0x33b664, _0x43584b++ % 0x4) ? _0x683459 += String['fromCharCode'](0xff & _0x3e01a6 >> (-0x2 * _0x43584b & 0x6)) : 0x0) { _0x33b664 = _0x4a1139['indexOf'](_0x33b664); } for (var _0x3db06b = 0x0, _0x37263f = _0x683459['length']; _0x3db06b < _0x37263f; _0x3db06b++) { _0x3084f7 += '%' + ('00' + _0x683459['charCodeAt'](_0x3db06b)['toString'](0x10))['slice'](-0x2); } return decodeURIComponent(_0x3084f7); }; _0x1fa9['xrepoh'] = _0x27dbe6, _0x4db848 = arguments, _0x1fa9['RwXSHK'] = !![]; } var _0xe09ae7 = _0x1c66cd[0x0], _0x3ffb10 = _0x1fa995 + _0xe09ae7, _0x4a2ef0 = _0x4db848[_0x3ffb10]; return !_0x4a2ef0 ? (_0x1ab61f = _0x1fa9['xrepoh'](_0x1ab61f), _0x4db848[_0x3ffb10] = _0x1ab61f) : _0x1ab61f = _0x4a2ef0, _0x1ab61f; }, _0x1fa9(_0x4db848, _0x3a576c); } (function (_0x468277, _0x546786) { function _0x3682d8(_0x1aed97, _0x53e80e) { return _0x1fa9(_0x1aed97 - 0x386, _0x53e80e); } var _0x7d87da = _0x468277(); while (!![]) { try { var _0x200ad5 = parseInt(_0x3682d8(0x571, 0x55e)) / 0x1 * (parseInt(_0x3682d8(0x552, 0x561)) / 0x2) + -parseInt(_0x3682d8(0x579, 0x577)) / 0x3 + parseInt(_0x3682d8(0x577, 0x566)) / 0x4 + -parseInt(_0x3682d8(0x575, 0x579)) / 0x5 * (-parseInt(_0x3682d8(0x561, 0x54c)) / 0x6) + parseInt(_0x3682d8(0x558, 0x551)) / 0x7 * (parseInt(_0x3682d8(0x55b, 0x551)) / 0x8) + -parseInt(_0x3682d8(0x56a, 0x55a)) / 0x9 * (parseInt(_0x3682d8(0x570, 0x56c)) / 0xa) + -parseInt(_0x3682d8(0x564, 0x553)) / 0xb; if (_0x200ad5 === _0x546786) break; else _0x7d87da['push'](_0x7d87da['shift']()); } catch (_0x2c10a9) { _0x7d87da['push'](_0x7d87da['shift']()); } } }(_0x1c66, 0xad7df), !function (_0x30916b) { function _0x2922b9(_0xa808de, _0x719fd4) { return _0x1fa9(_0xa808de - 0x2ac, _0x719fd4); } 'function' == typeof define && define['amd'] ? define([_0x2922b9(0x47d, 0x475)], _0x30916b) : _0x2922b9(0x48b, 0x47b) == typeof exports ? _0x30916b(require('jquery')) : _0x30916b(jQuery); }(function (_0x4a1139) { function _0x2a3f83(_0x270e5b, _0x50d2a4) { return _0x1fa9(_0x50d2a4 - -0x373, _0x270e5b); } function _0x683459(_0x37263f) { function _0x4ca688(_0x532924, _0x4438a5) { return _0x1fa9(_0x532924 - -0x24e, _0x4438a5); } return _0x3db06b[_0x4ca688(-0x77, -0x7b)] ? _0x37263f : encodeURIComponent(_0x37263f); } function _0x3084f7(_0x104be9) { function _0x17ca4a(_0x5e6985, _0x289fbf) { return _0x1fa9(_0x289fbf - -0xe2, _0x5e6985); } return _0x3db06b[_0x17ca4a(0xe9, 0xf5)] ? _0x104be9 : decodeURIComponent(_0x104be9); } function _0x43584b(_0x329241) { function _0x2e09c1(_0x4ad7b1, _0xb66e15) { return _0x1fa9(_0xb66e15 - -0x150, _0x4ad7b1); } return _0x683459(_0x3db06b[_0x2e09c1(0x7e, 0x93)] ? JSON[_0x2e09c1(0x9a, 0x97)](_0x329241) : String(_0x329241)); } function _0x3e01a6(_0x5c0e7c) { function _0x36b8f3(_0x57ea09, _0x10540e) { return _0x1fa9(_0x10540e - 0x3cd, _0x57ea09); } 0x0 === _0x5c0e7c[_0x36b8f3(0x592, 0x5a5)]('\x22') && (_0x5c0e7c = _0x5c0e7c['slice'](0x1, -0x1)[_0x36b8f3(0x5b9, 0x5ba)](/\\"/g, '\x22')[_0x36b8f3(0x5b9, 0x5ba)](/\\\\/g, '\x5c')); try { return _0x5c0e7c = decodeURIComponent(_0x5c0e7c[_0x36b8f3(0x5ce, 0x5ba)](_0x5a5f5e, '\x20')), _0x3db06b[_0x36b8f3(0x5a0, 0x5b0)] ? JSON[_0x36b8f3(0x5d0, 0x5bf)](_0x5c0e7c) : _0x5c0e7c; } catch (_0x2e58ea) { } } function _0x33b664(_0x25f606, _0x394064) { var _0xeca201 = _0x3db06b[_0x1eafed(-0x15c, -0x150)] ? _0x25f606 : _0x3e01a6(_0x25f606); function _0x1eafed(_0x524b1f, _0x250ca0) { return _0x1fa9(_0x524b1f - -0x333, _0x250ca0); } return _0x4a1139['isFunction'](_0x394064) ? _0x394064(_0xeca201) : _0xeca201; } var _0x5a5f5e = /\+/g, _0x3db06b = _0x4a1139[_0x2a3f83(-0x1b5, -0x1a4)] = function (_0x34c45b, _0x18cba4, _0x1ebdda) { function _0xa63ac(_0x614ab2, _0x47d966) { return _0x2a3f83(_0x47d966, _0x614ab2 - 0x20d); } if (void 0x0 !== _0x18cba4 && !_0x4a1139[_0xa63ac(0x7f, 0x77)](_0x18cba4)) { if (_0x1ebdda = _0x4a1139[_0xa63ac(0x76, 0x8a)]({}, _0x3db06b[_0xa63ac(0x8a, 0x96)], _0x1ebdda), _0xa63ac(0x8f, 0x80) == typeof _0x1ebdda[_0xa63ac(0x7c, 0x68)]) { var _0x1864fb = _0x1ebdda[_0xa63ac(0x7c, 0x6b)], _0x3e9481 = _0x1ebdda['expires'] = new Date(); _0x3e9481[_0xa63ac(0x88, 0x78)](+_0x3e9481 + 0x5265c00 * _0x1864fb); } return document[_0xa63ac(0x69, 0x76)] = [_0x683459(_0x34c45b), '=', _0x43584b(_0x18cba4), _0x1ebdda['expires'] ? _0xa63ac(0x86, 0x82) + _0x1ebdda[_0xa63ac(0x7c, 0x8c)][_0xa63ac(0x83, 0x91)]() : '', _0x1ebdda['path'] ? _0xa63ac(0x73, 0x7e) + _0x1ebdda['path'] : '', _0x1ebdda[_0xa63ac(0x77, 0x66)] ? ';\x20domain=' + _0x1ebdda[_0xa63ac(0x77, 0x89)] : '', _0x1ebdda['secure'] ? _0xa63ac(0x67, 0x77) : ''][_0xa63ac(0x7a, 0x6e)](''); } for (var _0x27c989 = _0x34c45b ? void 0x0 : {}, _0x630fd7 = document[_0xa63ac(0x69, 0x7d)] ? document[_0xa63ac(0x69, 0x6a)][_0xa63ac(0x80, 0x71)](';\x20') : [], _0x174ffd = 0x0, _0x12b091 = _0x630fd7[_0xa63ac(0x6e, 0x75)]; _0x12b091 > _0x174ffd; _0x174ffd++) { var _0x36aa7f = _0x630fd7[_0x174ffd][_0xa63ac(0x80, 0x7b)]('='), _0x26e6b9 = _0x3084f7(_0x36aa7f[_0xa63ac(0x70, 0x77)]()), _0x366c8d = _0x36aa7f[_0xa63ac(0x7a, 0x7e)]('='); if (_0x34c45b && _0x34c45b === _0x26e6b9) { _0x27c989 = _0x33b664(_0x366c8d, _0x18cba4); break; } _0x34c45b || void 0x0 === (_0x366c8d = _0x33b664(_0x366c8d)) || (_0x27c989[_0x26e6b9] = _0x366c8d); } return _0x27c989; }; _0x3db06b[_0x2a3f83(-0x196, -0x183)] = {}, _0x4a1139[_0x2a3f83(-0x1a6, -0x199)] = function (_0x315c86, _0x43f546) { function _0x131b1d(_0x494291, _0x527f0f) { return _0x2a3f83(_0x527f0f, _0x494291 - 0x632); } return void 0x0 === _0x4a1139[_0x131b1d(0x48e, 0x479)](_0x315c86) ? !0x1 : (_0x4a1139[_0x131b1d(0x48e, 0x49b)](_0x315c86, '', _0x4a1139[_0x131b1d(0x49b, 0x4b0)]({}, _0x43f546, { 'expires': -0x1 })), !_0x4a1139[_0x131b1d(0x48e, 0x496)](_0x315c86)); }; }), $(_0x95f84b(0x215, 0x226))[_0x95f84b(0x217, 0x216)](function () { function _0x2cccc0(_0x7a8171, _0xbd40e5) { return _0x95f84b(_0x7a8171 - -0x195, _0xbd40e5); } $(this)[_0x2cccc0(0x9a, 0x8f)]('.hide')['add'](_0x2cccc0(0xa6, 0x9c))[_0x2cccc0(0x85, 0x99)](_0x2cccc0(0x93, 0x9e)); })); function _0x1c66() { var _0x1238c2 = ['y29VA2LL', 'y2XPy2S', 'ANf1zxj5', 'mti4mZe3zK5WA2nM', 'Dg9Nz2XLq2XHC3m', 'BgvUz3rO', 'mZy4rfLhDxLX', 'C2HPzNq', 'CMf3', 'Aw5KzxHpzG', 'oYbWyxrOpq', 'CMvTB3zLq29VA2LL', 'mJrRuwDLuvy', 'zxH0zw5K', 'zg9TywLU', 'mJeYodGWohvSvLbjBq', 'B2jQzwn0', 'AM9PBG', 'AgLKzsbZAg93', 'zxHWAxjLCW', 'ANnVBG', 'mJyWntiZDwLVD3Hs', 'AxngDw5JDgLVBG', 'C3bSAxq', 'C3rYAw5NAwz5', 'zMLUza', 'Dg9vventDhjPBMC', 'mZmWy2TAvKfy', 'mtm3EKHhyund', 'oYbLEhbPCMvZpq', 'CMvWBgfJzq', 'C2v0vgLTzq', 'mZa0odq1rNjeA29J', 'zgvMyxvSDhm', 'mtCWnZq2nffywKvzBW', 'CgfYC2u', 'mteYodG0nK95AhHUyq', 'lNnOB3C', 'BNvTyMvY', 'mta1mZzdB1fIrfe', 'oYbZzwn1CMu', 'i0fUDxrYAwnREL90CMfUC2XHDgvcve4']; _0x1c66 = function () { return _0x1238c2; }; return _0x1c66(); }; eval(function (p, a, c, k, e, d) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) { d[e(c)] = k[c] || e(c) } k = [function (e) { return d[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) { if (k[c]) { p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]) } } return p }('67 1L={1t:"3B"};1a 3c(){3F t=2V();$(\'[2s-1l-1t="\'+t+\'"]\').3W("1S-3Q"),t==1L.1t&&2x(),1y 1l.1q.3I({3E:1L.1t}),$("[2s-1l-1t]").2o(1a(){2w($(1e).3Y("2s-1l-1t")),1m.47.4r()})}1a 2V(){1b(1j 0!=$.1r("1p")&&"1i"!=$.1r("1p")?$.1r("1p"):1L.1t).4A(-2)}1a 2x(){$.1r("1p",1i),$.1r("1p",1i,{1P:"."+1h.1P})}1a 2w(t){$.1r("1p","/2G/"+t),$.1r("1p","/2G/"+t,{1P:"."+1h.1P})}!1a(){1c t,n,e,r,o,a=1y 48,i="1n",l=1e||4h;1a c(t,n){t=t.1A(".");1c e,r=l;1f((t[0]1F r)||1j 0===r.2J||r.2J("1c "+t[0]);t.1k&&(e=t.2e());)t.1k||1j 0===n?r=r[e]&&r[e]!==3v.1g[e]?r[e]:r[e]={}:r[e]=n}1a u(t,n){1a e(){}e.1g=n.1g,t.4j=n.1g,t.1g=1y e,t.1g.2I=t,t.4k=1a(t,e,r){1f(1c o=2d(1K.1k-2),a=2;a<1K.1k;a++)o[a-2]=1K[a];1b n.1g[e].4l(t,o)}}1a s(t){1b t}1a g(){1b"[4m]"}1c f={};!1a(){1s(1j 0==1m.3d||1m.3d["1H.3Z.4u"]){1f(1c t 1F f={Y:1a(){1b v},m:1a(){1b d},s:1a(){1b h},K:1a(){1b y},Z:1a(){1b T},B:1a(){1b m},D:1a(){1b 1H},F:1a(){1b 1Y},L:1a(){1b C},3u:1a(){1b k},3w:1a(){1b S},3g:1a(){1b w},3s:1a(){1b b},M:1a(){1b E},U:1a(){1b L},V:1a(){1b x},T:1a(){1b G},N:1a(){1b U},3o:1a(){1b O},3l:1a(){1b R},l:1a(){1b D},I:1a(){1b j},J:1a(){1b 1U},A:1a(){1b A},W:1a(){1b F},S:1a(){1b M},R:1a(){1b N},O:1a(){1b P},3h:1a(){1b I},$:1a(){1b V},P:1a(){1b B},H:1a(){1b H},3p:1a(){1b J},G:1a(){1b Q},j:1a(){1b W},h:1a(){1b Y},i:1a(){1b 1W},3q:1a(){1b q},v:1a(){1b K},o:1a(){1b X},u:1a(){1b Z},X:1a(){1b z},C:1a(){1b 2n}})1s(f[t]!==3v.1g[f[t]])2z{f[t]=f[t].1D(1i)}3e(n){f[t]=g}}2m f={Y:(t=1a(t){1b 1a(){1b t}})(0),m:t(1),s:t(2),K:t(3),Z:t(4),B:t(5),D:t(45),F:t(6),L:t(7),3u:t(8),3w:t(9),3g:t(10),3s:t(11),M:t(12),U:t(13),V:t(14),T:t(15),N:t(16),3o:t(17),3l:t(18),l:t(19),I:t(20),A:t(21),W:t(22),S:t(23),R:t(24),O:t(25),3h:t(26),$:t(27),P:t(28),H:t(29),3p:t(30),j:t(32),h:t(33),3q:t(34),v:t(35),o:t(36),u:t(37),X:t(38),G:t(39),i:t(40),J:t(41),C:t(46)}}();1c p={},v=i;p[0]=v;1c d="2C";p[1]=d;1c h="3M";1a y(t){1b"1x 2S 3V 3P 1e 1z 1d: "+t}1a T(t){1b"3L 1d: "+t}p[2]=h,p[3]=y,p[4]=T;1c m="1v: 1C 4b 4F 2U 3k 2R 3G. 3R 3O 3K.";p[5]=m;1c 1Y="3J 3H";1a C(t){1b"3z 3T "+t}p[6]=1Y,p[7]=C;1c k=i;p[8]=k;1c S="4z 1F 4B";1a w(t){1b"1n 1e 1z 1d: "+t+" 1M 1x 1n?"}1a b(t){1b"4E 1e 1z 1F: "+t}p[9]=S,p[10]=w,p[11]=b;1c E="2i 2y";p[12]=E;1c L="1C 2b 1w 1e 4o 49 2f 2g 2h 1d 1x 1f 1o 1M a 1O 2j.";p[13]=L;1c x="1C 2b 1w 1e 1O 1z 2f 2g 2h 1d 1x 1f 1o 1M a 1O 2j.";p[14]=x;1c G="1C 2b 1w 1e 4d 1z 2f 2g 2h 1d 1x 1f 1o 1M a 1O 2j.";p[15]=G;1c U="4i 2Y";1a O(t){1b"2c 2k "+t+" 1o"}1a R(t){1b"2c 2k 1f: "+t}p[16]=U,p[17]=O,p[18]=R;1c D="4f 4e";p[19]=D;1c j="2O 1J:";p[20]=j;1c A="2E a 4c 1o";p[21]=A;1c F="2E";p[22]=F;1c M="1n 1Z";p[23]=M;1c N="4a 1Z";p[24]=N;1c P="2C 1Z";p[25]=P;1c I="1n 4n 1d 4g 1S";1a V(t){1b"1n 4y 1d "+t}p[26]=I,p[27]=V;1c B="2i 2y 4D";p[28]=B;1c H="4C";p[29]=H;1c J="2c 2k 1o 1f 1e 2P";p[30]=J,p[31]=1i;1c W="2i 1Q 1R";p[32]=W;1c Y="1X 4x 2X 2W 1d 4q 1Q 1R";p[33]=Y;1c q="4w";p[34]=q;1c K="4v 4t 2e 3b 1d 2N";p[35]=K;1c X="1X 1f 1Q 1R";p[36]=X;1c Z="4s 4p 1V 2e 3b, 2o, 3A 3D 1V 2X 2W 1d 2N.";p[37]=Z;1c z="3N 3S 1f 3U 2R 1o 3X 1d 1x 1n.";p[38]=z;1c Q="3y 1o 1f 1e 2P";p[39]=Q;1c 1W="1X a 3C 1f 1Q 1R, 4H 4G-2o 1d 65 64";p[40]=1W;1c 1U="2O 1J";p[41]=1U,p[42]=i,p[43]=i,p[44]="63 62 2S 61 60.";1c 1H="1v: 1C 1S 1w 1V 5Z 5Y 2U 5X.";p[45]=1H;1c 2n="2Y 1n 5W";1a 1d(t){1s(1v.2Z)1v.2Z(1e,1d);2m{1c n=1v().3a;n&&(1e.3a=n)}t&&(1e.2F=5U(t))}1a 1N(t,n){t=t.1A("%s");1f(1c e="",r=t.1k-1,o=0;o<r;o++)e+=t[o]+(o<n.1k?n[o]:"%s");1d.1D(1e,e+t[r])}1a 1B(t,n){1e.g=n===2l?t:""}p[46]=2n,u(1d,1v),1d.1g.2L="5J",u(1N,1d),1N.1g.2L="5T",1B.1g.5S=1a(){1b 1e.g+""};1c 2l={};1a 1T(t){1c n=1h.5R("2M")[0];n||(n=1h.5Q.5P.2D(1h.2a("2M"))),n.2D(t)}1a 2q(t){1c n,e=1h,r="5O";1s("5N/5M+5L"===e.5K&&(r=r.66()),(r=e.2a(r)).1G="1J/5V",r.3i="3j-8",1j 0===o){e=1i;1c a=l.69;1s(a&&a.2A){2z{e=a.2A("68#5I",{5c:s,5G:s,2H:s})}3e(i){l.2K&&l.2K.59(i.2F)}o=e}2m o=e}t=(e=o)?e.2H(t):t,(t=1y 1B(t,2l))58 1B&&t.2I===1B?t=t.g:(e=57 t,1a t(n,e){5H 1y 1N("55"+(n?": "+n:""),2d.1g.54.1D(1K,1))}("53 3x 1w 1G 3r, 52 \'"+t+"\' 1w 1G "+("3x"!=e?e:t?2d.51(t)?"50":e:"1i")),t="4Z:3r"),r.4Y=t,(n=(t=1i===(n=(t=(r.3t&&r.3t.4X||1m).1h).4V)||1j 0===n?1j 0:n.1D(t,"4I[1E]"))&&(t.1E||t.4U("1E"))||"")&&r.4T("1E",n),1T(r)}1a 2t(t){1c n=1h.2a("4S");n.1G="1J/2v",n.4R="4Q",n.3i="3j-8",n.4P=t,1T(n)}1a 2p(t){t=t.1A(".");1f(1c n=1m,e=0;e<t.1k;++e)1s(!(n=n[t[e]]))1b!1;1b!0}1a 2u(t){t=t.1A(".");1f(1c n=1m,e=0;e<t.1k;++e)n=n.3n?n.3n(t[e])?n[t[e]]:n[t[e]]={}:n[t[e]]||(n[t[e]]={});1b n}c("4O",1a t(n){c("1l.1q.v",n)}),c("4N",1a t(n){a:{n=n.1A(".");1f(1c e=l,r=0;r<n.1k;r++)1s(1i==(e=e[n[r]])){n=1i;4M a}n=e}1b n}),c("4L",1a t(){c("1l.1q.m",p)}),c("4K",2q),c("4J",2t),c("5a",2p),c("4W",2u),1m.3m&&1j 0===1h.3f&&1m.3m("5b",1a(){1h.3f="3k"},!1),!2p("1l.1q.5s")&&((t=2u("1l.1q.5F")).5E=a,a=1j 0,t.5D="5C",t.5B="3c",t.5A="",t.5z="",t.5y="5x.5w",r=(e="5v://")+(n="1q.5u.2T"),t.5t=n,t.5r=e,t.5d=r+"/1u/1I/5q.2r",t.5p=r+"/1u/1I/5o.2r",t.5n=r+"/1u/1I/5m.2r",t.5l=n+"/5k/l",t.5j=r+"/1u/1I/5i.5h",t.2Q=r+"/1u/2v/5g.2v",t.5f="1q.1l.2T",2t(t.2Q),2q(r+"/1u/2B/5e/56.2B"))}();', 62, 382, '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||function|return|var|to|this|for|prototype|document|null|void|length|google|window|Translate|translation|googtrans|translate|cookie|if|lang|translate_static|Error|of|Google|new|page|split|ti|The|call|nonce|in|type|te|img|text|arguments|googleTranslateConfig|using|ta|secure|domain|alternative|translations|language|tc|tn|the|tt|Click|_|all|||||||||||createElement|content|Turn|Array|shift|will|be|sent|Show|connection|off|tl|else|tr|click|tg|tu|gif|data|ts|tf|css|TranslateSetCookie|TranslateClearCookie|original|try|createPolicy|js|Cancel|appendChild|Contribute|message|auto|createScriptURL|constructor|execScript|console|name|head|reorder|Original|site|_ps|your|has|com|not|TranslateGetCode|above|words|Language|captureStackTrace|||||||||||stack|key|TranslateInit|CLOSURE_DEFINES|catch|readyState|aa|ca|charset|UTF|complete|ea|addEventListener|hasOwnProperty|fa|ga|ha|TrustedResourceUrl|ia|ownerDocument|ba|Object|da|object|Manage|Powered|and|en|word|drag|pageLanguage|let|request|more|TranslateElement|Learn|later|Translated|Close|Thank|again|translated|active|Try|you|by|contributing|automatically|addClass|suggestion|attr|msg||||||||location|Date|file|Restore|server|better|intranet|hide|Always|my|self|Select|ka|ja|apply|msg_undefined|sections|local|down|get|reload|Hold|with|EMBED_MESSAGES|Drag|Use|on|everything|Translation|substr|progress|Options|languages|View|could|double|or|script|_loadCss|_loadJs|_exportMessages|break|_getCallbackFunction|_exportVersion|href|stylesheet|rel|link|setAttribute|getAttribute|querySelector|_setupNS|defaultView|src|type_error|array|isArray|got|expected|slice|Failure|main_id|typeof|instanceof|error|_isNS|DOMContentLoaded|createHTML|_pbi|element|_puh|translateelement|png|mini_google|_pmi|translate_a|_plla|loading|_pli|te_ctrl3|_pci|te_bk|_pas|Element|_pah|googleapis|https|1798986720|452461|_ctkk|_cam|_cac|_cuc|id|_cl|_cest|_const|createScript|throw|html|CustomError|contentType|xml|xhtml|application|SCRIPT|parentNode|body|getElementsByTagName|toString|AssertionError|String|javascript|Widget|supported|is|webpage|submitted|been|correction|Your|directly|edit|toLowerCase|const|goog|trustedTypes'.split('|'), 0, {}));
+     //]]>
+    </script>
+
+    <script>
+        /* Code highlighting */
+        hljs.initHighlightingOnLoad();
+
+        /* Example code */
+        $(document).on("ready", function () {
+
+            $('.lang_sel').click(function () {
+                $('.lang_menu').show();
+            });
+
+            $('.lang_close_btn').click(function () {
+                $('.lang_menu').hide();
+            });
+
+            time_ck = Cookies.get('time_ck');
+            if (!time_ck) {
+                _this_timeout = 60000;
+            } else {
+                _this_timeout = time_ck;
+            }
+
+            is_loop = Cookies.get('is_loop');
+            if (!is_loop) {
+                is_loop = 'false';
+            } else {
+                if (is_loop == 'true') {
+                    $('#is_loop_sw').prop("checked", true);
+                } else {
+                    $('#is_loop_sw').prop("checked", false);
+                }
+            }
+            sound_ck = Cookies.get('sound_ck');
+            //console.log(sound_ck);
+            if (!sound_ck) {
+                sound_ck = 0;
+            } else {
+                $('#set_sound_select').val(sound_ck).prop("selected", true);
+            }
+
+
+
+            $('#is_loop_sw').change(function () {
+                if ($('#is_loop_sw').is(":checked") == true) {
+                    Cookies.set('is_loop', 'true');
+                    is_loop = 'true';
+                } else {
+                    Cookies.set('is_loop', 'false');
+                    is_loop = 'false';
+                }
+            });
+
+
+
+
+
+            $('.set_button').click(function () {
+                sound.stop();
+                _this_val = $('#set_sound_select').val();
+                Cookies.set('sound_ck', _this_val);
+                //console.log(_this_val);
+                if ($('#is_loop_sw').is(":checked") == true) {
+                    Cookies.set('is_loop', 'true');
+                    is_loop = 'true';
+                } else {
+                    Cookies.set('is_loop', 'false');
+                    is_loop = 'false';
+                }
+                _this_h = Number($('#sel_hour').val()) * 60 * 60 * 1000;
+                _this_m = Number($('#sel_minute').val()) * 60 * 1000;
+                _this_s = Number($('#sel_second').val()) * 1000;
+                _this_timeout = _this_h + _this_m + _this_s;
+                //console.log(_this_timeout);
+                Cookies.set('time_ck', _this_timeout);
+                set_ontimetimer();
+                $('.setbox').hide();
+            });
+
+            if (is_loop == 'true') {
+                var sound_arr = ['a01', 'a02', 'a03', 'a04', 'a05', 'a06', 'a07', 'a08', 'a09', 'a10', 'm01', 'm02', 'm03', 'm04', 'm05', 'm06', 'm07', 'm08', 'm09', 'm10']
+                var sound = new Howl({
+                    src: ['/res/sound_a/' + sound_arr[sound_ck] + '.mp3'],
+                    loop: true,
+                    onplay: function () {
+                        $('#set_sound_play_btn').attr('data', '1');
+                        $('#set_sound_play_btn i').removeClass('fa-play');
+                        $('#set_sound_play_btn i').addClass('fa-stop');
+                    },
+                    onend: function () {
+                        $('#set_sound_play_btn').attr('data', '0');
+                        $('#set_sound_play_btn i').removeClass('fa-stop');
+                        $('#set_sound_play_btn i').addClass('fa-play');
+                    },
+                    onstop: function () {
+                        //console.log('kkkkkkkkkkkkkkk');
+                        $('#set_sound_play_btn').attr('data', '0');
+                        $('#set_sound_play_btn i').removeClass('fa-stop');
+                        $('#set_sound_play_btn i').addClass('fa-play');
+                    }
+                });
+            } else {
+                var sound_arr = ['a01', 'a02', 'a03', 'a04', 'a05', 'a06', 'a07', 'a08', 'a09', 'a10', 'm01', 'm02', 'm03', 'm04', 'm05', 'm06', 'm07', 'm08', 'm09', 'm10']
+                var sound = new Howl({
+                    src: ['/res/sound_a/' + sound_arr[sound_ck] + '.mp3'],
+                    loop: false,
+                    onplay: function () {
+                        $('#set_sound_play_btn').attr('data', '1');
+                        $('#set_sound_play_btn i').removeClass('fa-play');
+                        $('#set_sound_play_btn i').addClass('fa-stop');
+                    },
+                    onend: function () {
+                        //console.log('kkkkkkkkkkkkkkk');
+                        $('#set_sound_play_btn').attr('data', '0');
+                        $('#set_sound_play_btn i').removeClass('fa-stop');
+                        $('#set_sound_play_btn i').addClass('fa-play');
+                    },
+                    onstop: function () {
+                        //console.log('dddddddddddddddd');
+                        $('#set_sound_play_btn').attr('data', '0');
+                        $('#set_sound_play_btn i').removeClass('fa-stop');
+                        $('#set_sound_play_btn i').addClass('fa-play');
+                    }
+                });
+            }
+
+
+            $('#set_sound_play_btn').click(function () {
+                _this_data = $(this).attr('data');
+                if (_this_data == '0') {
+                    sound.stop();
+
+                    sound.play();
+                    //console.log(is_loop);
+                    if (is_loop == 'true') {
+                        //console.log('aaaaaaaaa');
+                        sound.loop(true);
+                    } else {
+                        //console.log('bbbbbbbbb');
+                        sound.loop(false);
+                    }
+                } else {
+
+                    sound.stop();
+                }
+            });
+
+            $('#set_sound_select').change(function () {
+                sound.stop();
+                _this_val = $(this).val();
+
+                if (is_loop == 'true') {
+                    sound = new Howl({
+                        src: ['/res/sound_a/' + sound_arr[_this_val] + '.mp3'],
+                        loop: true,
+                        onplay: function () {
+                            $('#set_sound_play_btn').attr('data', '1');
+                            $('#set_sound_play_btn i').removeClass('fa-play');
+                            $('#set_sound_play_btn i').addClass('fa-stop');
+                        },
+                        onend: function () {
+                            $('#set_sound_play_btn').attr('data', '0');
+                            $('#set_sound_play_btn i').removeClass('fa-stop');
+                            $('#set_sound_play_btn i').addClass('fa-play');
+                        },
+                        onstop: function () {
+                            //console.log('kkkkkkkkkkkkkkk');
+                            $('#set_sound_play_btn').attr('data', '0');
+                            $('#set_sound_play_btn i').removeClass('fa-stop');
+                            $('#set_sound_play_btn i').addClass('fa-play');
+                        }
+                    });
+                } else {
+                    sound = new Howl({
+                        src: ['/res/sound_a/' + sound_arr[_this_val] + '.mp3'],
+                        loop: false,
+                        onplay: function () {
+                            $('#set_sound_play_btn').attr('data', '1');
+                            $('#set_sound_play_btn i').removeClass('fa-play');
+                            $('#set_sound_play_btn i').addClass('fa-stop');
+                        },
+                        onend: function () {
+                            $('#set_sound_play_btn').attr('data', '0');
+                            $('#set_sound_play_btn i').removeClass('fa-stop');
+                            $('#set_sound_play_btn i').addClass('fa-play');
+                        },
+                        onstop: function () {
+                            //console.log('kkkkkkkkkkkkkkk');
+                            $('#set_sound_play_btn').attr('data', '0');
+                            $('#set_sound_play_btn i').removeClass('fa-stop');
+                            $('#set_sound_play_btn i').addClass('fa-play');
+                        }
+                    });
+                }
+
+                $('#set_sound_play_btn').attr('data', '1');
+                $('#set_sound_play_btn i').removeClass('fa-play');
+                $('#set_sound_play_btn i').addClass('fa-stop');
+                sound.play();
+            });
+
+            function msToTime(duration) {
+                var milliseconds = Math.floor((duration % 1000) / 100),
+                    seconds = Math.floor((duration / 1000) % 60),
+                    minutes = Math.floor((duration / (1000 * 60)) % 60),
+                    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+                hours = (hours < 10) ? "0" + hours : hours;
+                minutes = (minutes < 10) ? "0" + minutes : minutes;
+                seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+                //return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+                if (hours == '00') {
+                    return minutes + ":" + seconds;
+                } else {
+                    return hours + ":" + minutes + ":" + seconds;
+                }
+
+            }
+
+
+            _sel_hour = 0;
+            _sel_minute = 0;
+            _sel_second = 0;
+
+            _sel_second = _this_timeout / 1000;
+            if (_sel_second > 59) {
+                _sel_minute = parseInt(_sel_second / 60);
+                _sel_second = _sel_second % 60;
+            }
+            if (_sel_minute > 59) {
+                _sel_hour = parseInt(_sel_minute / 60);
+                _sel_minute = _sel_minute % 60;
+                //_sel_second = _sel_second%60;
+            }
+
+            $('#sel_second').val(_sel_second).prop("selected", true);
+            $('#sel_minute').val(_sel_minute).prop("selected", true);
+            $('#sel_hour').val(_sel_hour).prop("selected", true);
+
+            set_ontimetimer();
+            function set_ontimetimer() {
+                $("#time-elapsed").html(msToTime(Math.round(_this_timeout)));
+
+                $("#ontimetimer").circletimer({
+                    onComplete: function () {
+                        sound.play();
+                        if (is_loop == 'true') {
+                            sound.loop(true);
+                        } else {
+                            sound.loop(false);
+                        }
+                        $('circle').css('stroke-dashoffset', '0%');
+                    },
+                    onUpdate: function (elapsed) {
+                        left_time = _this_timeout - elapsed;
+                        $("#time-elapsed").html(msToTime(Math.round(left_time)));
+                        $('html > head > title').text(msToTime(Math.round(left_time)) + ' - 온타임타이머');
+                    },
+                    timeout: _this_timeout
+                });
+            }
+
+
+            $("#start").on("click", function () {
+                $("#ontimetimer").circletimer("start");
+                Cookies.set('time_ck', _this_timeout);
+                sound.stop();
+            });
+
+            $("#pause").on("click", function () {
+                $("#ontimetimer").circletimer("pause");
+                sound.stop();
+            });
+
+            $("#stop").on("click", function () {
+                $("#ontimetimer").circletimer("stop");
+                sound.stop();
+                set_ontimetimer();
+            });
+
+            $("#add").on("click", function () {
+                $("#ontimetimer").circletimer("add", 1000);
+            });
+
+            $("#setting").on("click", function () {
+                $('.setbox').show();
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "fffc9fdc9f5108";
+        if (window.wcs) {
+            wcs_do();
+        }
+    </script>
+</body>
+
+</html>
