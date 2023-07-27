@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="copyright" content="Copyright (c) Comfort Software Group">
+  <title>Online Alarm Clock - vClock</title>
+  <link rel="canonical" href="https://vclock.com/">
+  <link rel="stylesheet" href="/css/embed.css?v=36">
+  <meta name="author" content="Comfort Software Group">
+  <style></style>
+  <style id="color-style"></style>
+</head>
+
+<body class="embed">
+  <div class="main-content">
+
+    <div class="row">
+      <div class="col-md-12 text-light" id="col-main" data-alarm-time="">
+        <div class="panel panel-default" id="pnl-main" data-utc="1690014004">
+          <div class="panel-logo">
+            <a href="https://vclock.com/" title="Online Alarm Clock - vClock" data-toggle="tooltip"
+              target="_blank"><span class="icon ci-logo colored"></span></a>
+          </div>
+          <noscript>
+            <div id="pnl-ns-time" style="display:block; position:relative; text-align:center; padding:10px;"><span
+                id="lbl-ns-title" style="font-size:24px;"></span></div>
+          </noscript>
+          <div id="pnl-time" style="display: block; position: relative; text-align: center;">
+            <a href='https://vclock.com/' title='Online Alarm Clock - vClock' target='_blank'><span id="lbl-time"
+                class="colored digit text-nowrap font-digit" style="font-size:70px;"><noscript>4:20:04
+                  AM</noscript></span><span id="lbl-noon" class="colored digit text-nowrap font-digit"></span></a>
+          </div>
+          <h1 id="lbl-title" class="colored main-title" style="display: none; position: absolute;"></h1>
+          <div id="lbl-date" class="colored digit-text text-center" style="display: block; position: absolute;"></div>
+          <div id="pnl-set-alarm" class="text-center" style="display: block; position: absolute;">
+            <button type="button" class="btn btn-space btn-classic btn-default" style="display:none;"
+              id="btn-test-spec-alarm">Test</button>
+            <button type="button" class="btn btn-space btn-classic btn-primary" style="display:none;"
+              id="btn-edit-spec-alarm">Edit</button>
+            <button type="button" class="btn btn-space btn-classic btn-alt3" style="display:none;"
+              id="btn-set-alarm">Set Alarm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="display:none;" id="row-alarm">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="colored panel-body text-center">
+            <div style="padding-bottom: 15px;">
+              <h1 id="lbl-alarm-title" class="main-title">Alarm</h1>
+              <div style="padding: 5px;" id="pnl-alarm-time"><span class="icon ci-alarm"></span> <span
+                  id="lbl-alarm-time" class="digit"></span></div>
+              <div id="pnl-alarm-timer"><span class="icon ci-timer"></span> <span id="lbl-alarm-timer"
+                  class="digit">--:--:--</span></div>
+            </div>
+            <button type="button" class="btn btn-space btn-danger" style="display:none;" id="btn-stop-alarm">Stop
+              Alarm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><select style="display:none;" id="edt-hour"></select>
+  <select style="display:none;" id="edt-minute"></select>
+  <input style="display:none;" id="edt-title" value="">
+  <select id="edt-audio" style="display:none;"></select>
+  <script src="/js/jquery.min.js?v=6"></script>
+  <script src="/js/lang/en.js?v=79"></script>
+  <script src="/js/common.js?v=79"></script>
+  <script src="/js/alarm.js?v=79"></script>
+  <script>$(function () { vAlarm.init(); });</script>
+</body>
+
+</html>

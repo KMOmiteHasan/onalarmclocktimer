@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Set the hour and minute for the online alarm clock. The alarm message will appear, and the preselected sound will be played at the set time." />
+  <meta name="keywords"
+    content="online alarm clock, alarm clock, alarm clocks, online clock, wake up, alarm clock for free, alarm clock app, internet alarm clock, virtual alarm clock, free alarm clock, hours, minutes, virtual clock,onalarmclocktimer" />
+  <meta name="copyright" content="Copyright (c) Comfort Software Group" />
+  <meta property="og:title" content="Online Alarm Clock - onalarmclocktimer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="onalarmclocktimer" />
+  <meta property="og:url" content="https://" />
+  <meta property="og:description"
+    content="Set the hour and minute for the online alarm clock. The alarm message will appear, and the preselected sound will be played at the set time." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@onalarmclocktimer" />
+  <title>Online Alarm Clock - onalarmclocktimer</title>
+  <link rel="canonical" href="https://" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="/img/favicons/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/img/favicons/android-chrome-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="/img/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#1565c0" />
+  <link rel="shortcut icon" href="/img/favicons/favicon.ico" />
+  <link rel="shortcut icon" sizes="192x192" href="/img/favicons/android-chrome-192x192.png" />
+  <link rel="shortcut icon" sizes="96x96" href="/img/favicons/android-chrome-96x96.png" />
+  <link rel="shortcut icon" sizes="72x72" href="/img/favicons/android-chrome-72x72.png" />
+  <link rel="shortcut icon" sizes="48x48" href="/img/favicons/android-chrome-48x48.png" />
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/img/favicons/browserconfig.xml" />
+  <meta name="author" content="Comfort Software Group" />
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style id="color-style"></style>
+  <script>
+    function hideById(id) {
+      var x = document.getElementById(id);
+      if (x != null) x.style.display = "none";
+    }
+  </script>
+  <noscript>
+    <style>
+      #pnl-main {
+        height: auto;
+      }
+
+      #pnl-tools {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <!--[if lt IE 9
+  //     ]><style>
+  //       #pnl-tools,
+  //       .sb-content,
+  //       .container-fluid,
+  //       .am-logo {
+  //         display: none;
+  //       }
+  //       .dropdown-menu-right {
+  //         left: 0;
+  //         right: auto;
+  //       }
+  //       td {
+  //         padding: 0 12px;
+  //       }
+  //     </style><!
+  //   [endif]-->
+</head>
+
+<body class="open-right-sidebar">
+  <div id="pnl-full-screen" style="display: none"></div>
+  <div class="am-wrapper am-fixed-sidebar">
+    <nav class="navbar navbar-default navbar-fixed-top am-top-header">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="page-title">
+            <span>Online Alarm Clock - onalarmclocktimer</span>
+          </div>
+          <a href="javascript:;" class="am-toggle-left-sidebar navbar-toggle collapsed"><span
+              class="icon-bar"><span></span><span></span><span></span></span></a>
+          <a href="/" class="navbar-brand">onalarmclock<span>timer</span></a>
+        </div>
+        <a href="javascript:;" class="am-toggle-right-sidebar" title="Settings" data-toggle="tooltip"
+          data-placement="bottom"><span class="icon ci-config"></span></a><a href="javascript:;" data-toggle="collapse"
+          data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed"><span
+            class="icon ci-angle-down"></span></a>
+        <div id="am-navbar-collapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right am-icons-nav">
+            <li class="dropdown">
+              <a href="javascript:;" role="button" title="Night Mode" data-toggle="tooltip" data-placement="bottom"
+                id="btn-night-mode"><span class="icon ci-contrast" id="icon-night-mode"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="am-left-sidebar">
+      <div class="content">
+        <div class="am-logo">
+        </div>
+        <ul class="sidebar-elements">
+          <li class="active">
+            <a href="/" id="link-alarm"><i class="icon ci-alarm"></i><span>Alarm&nbsp;Clock</span></a>
+          </li>
+          <li class="parent">
+            <a href="/timer/" id="link-timer"><i class="icon ci-timer"></i><span>Timer</span></a>
+          </li>
+          <li class="parent">
+            <a href="/stopwatch/"><i class="icon ci-stopwatch"></i><span>Stopwatch</span></a>
+          </li>
+          <li class="parent">
+            <a href="/time/"><i class="icon ci-clock"></i><span>Time</span></a>
+          </li>
+          <li class="parent">
+            <a href="/pomodoro/"><i class="icon ci-timer"></i><span>Pomodoro</span></a>
+          </li>
+        </ul>
+        <!--Sidebar bottom content-->
+      </div>
+    </div>
+    <div class="am-content">
+      <div class="main-content">
+        <!-- Place for 1st ad -->
+        <div id="pnl-ne0n">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-ne0n">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <noscript>
+          <div class="row" id="pnl-noscript">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>
+                    For full functionality of this site it is necessary to
+                    enable JavaScript.
+                  </p>
+                  <a href="//www.enable-javascript.com/en/" target="_blank" rel="nofollow">Learn how to enable
+                    JavaScript</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </noscript>
+        <div class="row">
+          <div class="col-md-12 text-light" id="col-main" data-alarm-time="">
+            <div class="panel panel-default" id="pnl-main" data-utc="1689251579">
+              <div class="panel-tools" id="pnl-tools">
+                <span class="icon ci-share" title="Share" data-toggle="tooltip" id="btn-tool-share"></span>
+                <span class="icon ci-less" title="Decrease Font Size" data-toggle="tooltip" id="btn-font-minus"></span>
+                <span class="icon ci-plus2" title="Increase Font Size" data-toggle="tooltip" id="btn-font-plus"></span>
+                <span class="icon ci-expand1" title="Full Screen" data-toggle="tooltip" id="btn-full-screen"></span>
+                <span class="icon ci-collapse" title="Exit Full Screen" data-toggle="tooltip" style="display: none"
+                  id="btn-full-screen-exit"></span>
+              </div>
+              <noscript>
+                <div id="pnl-ns-time" style="
+                      display: block;
+                      position: relative;
+                      text-align: center;
+                      padding: 10px;
+                    ">
+                  <span id="lbl-ns-title" style="font-size: 24px"></span>
+                </div>
+              </noscript>
+              <div id="pnl-time" style="display: block; position: relative; text-align: center">
+                <span id="lbl-time" class="colored digit text-nowrap font-digit"
+                  style="font-size: 70px"><noscript>8:32:59 AM</noscript></span><span id="lbl-noon"
+                  class="colored digit text-nowrap font-digit"></span>
+              </div>
+              <h1 id="lbl-title" class="colored main-title" style="display: none; position: absolute"></h1>
+              <div id="lbl-date" class="colored digit-text text-center" style="display: block; position: absolute">
+              </div>
+              <div id="pnl-set-alarm" class="text-center" style="display: block; position: absolute">
+                <button type="button" class="btn btn-space btn-classic btn-default" style="display: none"
+                  id="btn-test-spec-alarm">
+                  Test
+                </button>
+                <button type="button" class="btn btn-space btn-classic btn-primary" style="display: none"
+                  id="btn-edit-spec-alarm">
+                  Edit
+                </button>
+                <button type="button" class="btn btn-space btn-classic btn-alt3" style="display: none"
+                  id="btn-set-alarm">
+                  Set Alarm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="display: none" id="row-alarm">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="colored panel-body text-center">
+                <div style="padding-bottom: 15px">
+                  <h1 id="lbl-alarm-title" class="main-title">Alarm</h1>
+                  <div style="padding: 5px" id="pnl-alarm-time">
+                    <span class="icon ci-alarm"></span>
+                    <span id="lbl-alarm-time" class="digit"></span>
+                  </div>
+                  <div id="pnl-alarm-timer">
+                    <span class="icon ci-timer"></span>
+                    <span id="lbl-alarm-timer" class="digit">--:--:--</span>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-space btn-danger" style="display: none" id="btn-stop-alarm">
+                  Stop Alarm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place for 2nd ad -->
+        <div id="pnl-ne0n">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-ne0n">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="pnl-links">
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Set the alarm for the specified time
+              </div>
+              <div class="panel-body">
+                <a href="/set-alarm-for-4-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 4 AM">4:00 AM</a>
+                <a href="/set-alarm-for-4-30-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 4:30 AM">4:30 AM</a>
+                <br /><a href="/set-alarm-for-5-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 5 AM">5:00 AM</a>
+                <a href="/set-alarm-for-5-15-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 5:15 AM">5:15 AM</a>
+                <a href="/set-alarm-for-5-30-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 5:30 AM">5:30 AM</a>
+                <a href="/set-alarm-for-5-45-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 5:45 AM">5:45 AM</a>
+                <br /><a href="/set-alarm-for-6-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 6 AM">6:00 AM</a>
+                <a href="/set-alarm-for-6-15-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 6:15 AM">6:15 AM</a>
+                <a href="/set-alarm-for-6-30-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 6:30 AM">6:30 AM</a>
+                <a href="/set-alarm-for-6-45-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 6:45 AM">6:45 AM</a>
+                <br /><a href="/set-alarm-for-7-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 7 AM">7:00 AM</a>
+                <a href="/set-alarm-for-7-15-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 7:15 AM">7:15 AM</a>
+                <a href="/set-alarm-for-7-30-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 7:30 AM">7:30 AM</a>
+                <a href="/set-alarm-for-7-45-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 7:45 AM">7:45 AM</a>
+                <br /><a href="/set-alarm-for-8-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 8 AM">8:00 AM</a>
+                <a href="/set-alarm-for-8-15-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 8:15 AM">8:15 AM</a>
+                <a href="/set-alarm-for-8-30-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 8:30 AM">8:30 AM</a>
+                <a href="/set-alarm-for-8-45-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 8:45 AM">8:45 AM</a>
+                <a href="/set-alarm-for-5-00-pm/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 5:00 PM">5:00 PM</a>
+                <a href="/set-alarm-for-6-00-pm/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 6:00 AM">6:00 PM</a>
+                <br /><a href="/set-alarm-for-9-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 9 AM">9:00 AM</a>
+                <a href="/set-alarm-for-10-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 10 AM">10:00 AM</a>
+                <a href="/set-alarm-for-11-00-am/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 11 AM">11:00 AM</a>
+                <a href="/set-alarm-for-12-00-pm/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 12 PM">12:00 PM</a>
+                <a href="/set-alarm-for-1-00-pm/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 1 PM">1:00 PM</a>
+                <a href="/set-alarm-for-2-00-pm/" class="btn btn-space btn-classic btn-primary"
+                  title="Set Alarm for 2 PM">2:00 PM</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <!-- Place for 3rd ad -->
+            <div id="pnl-ne0n">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="panel panel-default">
+                    <div class="panel-ne0n">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="tools">
+                  <span class="icon ci-edit" id="btn-edit-history"></span>
+                </div>
+                Recently used
+              </div>
+              <div class="panel-body">
+                <table class="center table-history" id="alm-history"></table>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="row" id="pnl-description">
+          <div class="col-lg-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1>How to use the online alarm clock</h1>
+              </div>
+              <div class="panel-body">
+                <p>
+                  Set the hour and minute for the online alarm clock. The
+                  alarm message will appear, and the preselected sound will be
+                  played at the set time.
+                </p>
+                <p>
+                  When setting the alarm, you can click the "Test" button to
+                  preview the alert and check the sound volume.
+                </p>
+                <p>
+                  You can configure the alarm clock appearance (text color,
+                  type, and size), and these settings will be saved; they will
+                  be used when you open your web browser next time.
+                </p>
+                <p>
+                  The online alarm clock will not work if you close your
+                  browser or shut down your computer, but it can work without
+                  an internet connection.
+                </p>
+                <p>
+                  You can add links to online alarm clocks with different time
+                  settings to your browser's Favorites. Opening such a link
+                  will set the alarm clock to the predefined time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="pnl-share" style="display: none">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body panel-share">
+                <div class="form-group xs-mb-10 sm-mb-15 xs-mt-0 sm-mt-5">
+                  <input class="form-control text-center" spellcheck="false" dir="ltr" id="edt-share" value="/" />
+                </div>
+                <ul>
+                  <li>
+                    <button onclick="share.popup('facebook')" title="Share to Facebook. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-facebook"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('twitter')" title="Share to Twitter. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-twitter"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('whatsapp')" title="Share to WhatsApp. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-whatsapp"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('blogger')" title="Share to Blogger. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-blogger"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('reddit')" title="Share to reddit. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-reddit"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('tumblr')" title="Share to Tumblr. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-tumblr"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('pinterest')" title="Share to Pinterest. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-pinterest"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('linkedin')" title="Share to LinkedIn. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-linkedin"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('livejournal')" title="Share to LiveJournal. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-livejournal"></span>
+                    </button>
+                  </li>
+                  <li class="hidden-xs">
+                    <button data-toggle="modal" data-target="#form-embed" class="btn btn-primary btn-embed">
+                      Embed
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        hideById("pnl-noscript");
+        hideById("pnl-ns-time");
+        hideById("col-main");
+        hideById("pnl-description");
+        hideById("pnl-links");
+      </script>
+    </div>
+    <nav class="am-right-sidebar">
+      <div class="sb-content">
+        <div class="tab-panel">
+          <div class="tab-content">
+            <div class="tab-pane ticket active" id="tab0" role="tabpanel">
+              <div class="ticket-container">
+                <div class="ticket-wrapper am-scroller nano">
+                  <div class="am-scroller-ticket nano-content">
+                    <div class="content ticket-content">
+                      <h2>Settings</h2>
+                      <form>
+                        <div class="form-group options">
+                          <div class="field">
+                            <label>Digital Font</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-digital" />
+                                <span><label for="switch-digital"></label></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>12 hours (am/pm)</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-12hour" />
+                                <span><label for="switch-12hour"></label></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>Show Date</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-date" />
+                                <span><label for="switch-date"></label></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>Night Mode</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-night-mode" />
+                                <span><label for="switch-night-mode"></label></span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <label>Colors</label>
+                          <div class="panel-colors" id="pnl-colors"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btn-options-close">
+                          OK
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Alarm Settings Form -->
+  <div id="form-alarm" tabindex="-1" role="dialog" class="modal fade modal-colored-header">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
+              <i class="icon ci-close"></i>
+            </button>
+            <h3 class="modal-title">Edit Alarm</h3>
+          </div>
+          <div class="modal-body form">
+            <div class="row">
+              <div class="form-group col-xs-6 float-left">
+                <label for="edt-hour">Hours</label>
+                <div class="input-group xs-mb-0">
+                  <span class="input-group-btn"><button type="button" tabindex="-1" class="btn btn-mp"
+                      id="btn-hour-minus" value="-1">
+                      <span class="icon ci-arrow-left"></span></button></span>
+                  <select class="form-control" id="edt-hour"></select>
+                  <span class="input-group-btn"><button type="button" tabindex="-1" class="btn btn-mp"
+                      id="btn-hour-plus" value="1">
+                      <span class="icon ci-arrow-right"></span></button></span>
+                </div>
+              </div>
+              <div class="form-group col-xs-6 float-left">
+                <label for="edt-minute">Minutes</label>
+                <div class="input-group xs-mb-0">
+                  <span class="input-group-btn"><button type="button" tabindex="-1" class="btn btn-mp"
+                      id="btn-minute-minus" value="-1">
+                      <span class="icon ci-arrow-left"></span></button></span>
+                  <select class="form-control" id="edt-minute"></select>
+                  <span class="input-group-btn"><button type="button" tabindex="-1" class="btn btn-mp"
+                      id="btn-minute-plus" value="1">
+                      <span class="icon ci-arrow-right"></span></button></span>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="group-audio">
+              <div class="form-group col-xs-8 col-sm-7">
+                <label for="edt-audio">Sound</label>
+                <div class="input-group xs-mb-0">
+                  <select class="form-control" id="edt-audio"></select>
+                  <span class="input-group-btn">
+                    <button type="button" class="btn" id="btn-audio-play">
+                      <span class="icon ci-play-outline" id="audio-play-icon"></span>
+                      <span class="icon ci-pause-outline" style="display: none" id="audio-pause-icon"></span>
+                    </button>
+                    <input id="local-audio-file" type="file" accept="audio/*" />
+                    <button type="button" class="btn xs-ml-5" id="btn-audio-file">
+                      <span class="icon ci-more"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group col-xs-4 col-sm-5 xs-pl-0 sm-pl-15">
+                <div class="am-checkbox am-checkbox-form">
+                  <input id="chk-audio-repeat" type="checkbox" />
+                  <label for="chk-audio-repeat" class="text-ellipsis">Repeat sound</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group xs-mb-0 sm-mb-5">
+              <label for="edt-title">Title</label>
+              <input class="form-control" id="edt-title" value="Alarm" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="text-left col-xs-4">
+                <button type="button" class="btn btn-classic btn-default" id="btn-test-alarm">
+                  Test
+                </button>
+              </div>
+              <div class="text-right col-xs-8">
+                <button type="button" data-dismiss="modal" class="btn btn-classic btn-default" id="btn-cancel">
+                  Cancel
+                </button>
+                <button type="button" data-dismiss="modal" class="btn btn-classic btn-alt3" id="btn-start-alarm">
+                  Start
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Alarm Modal Dialog -->
+  <div id="dialog-alarm" tabindex="-1" role="dialog"
+    class="modal fade modal-colored-header modal-colored-header-danger">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
+              <i class="icon ci-close"></i>
+            </button>
+            <h3 class="modal-title">Alarm</h3>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              <div class="i-circle text-danger">
+                <span class="icon ci-alarm"></span>
+              </div>
+              <h3 id="lbl-dialog-alarm-title"></h3>
+              <h3 id="lbl-dialog-alarm-time"></h3>
+              <p id="lbl-overdue"></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="text-center">
+              <button type="button" data-dismiss="modal" class="btn btn-classic btn-danger">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Embed Modal Dialog -->
+  <div id="form-embed" tabindex="-1" role="dialog" class="modal fade modal-colored-header">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
+              <i class="icon ci-close"></i>
+            </button>
+            <h3 class="modal-title">Embed</h3>
+          </div>
+          <div class="modal-body form bkg-lightgrey">
+            <div class="form-group" id="group-show-buttons">
+              <div class="am-checkbox xs-p-0">
+                <input id="chk-show-buttons" type="checkbox" />
+                <label for="chk-show-buttons">Show Buttons</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edt-size">Size</label>
+              <select class="form-control" id="edt-size">
+                <option>Custom</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="edt-embed">HTML Code</label>
+              <textarea rows="4" class="form-control" spellcheck="false" dir="ltr" id="edt-embed"></textarea>
+            </div>
+            <div class="form-group hidden-xs xs-mb-0">
+              <label>Preview</label>
+              <div class="embed-preview"></div>
+            </div>
+          </div>
+          <div class="modal-footer bkg-lightgrey">
+            <div class="text-center">
+              <button type="button" data-dismiss="modal" class="btn btn-classic btn-default">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="am-footer">
+    <a href="/contacts/" rel="nofollow">Contacts</a>
+    | <a href="/terms/" rel="nofollow">Terms of use</a> |
+    <a href="/privacy/" rel="nofollow">Privacy</a> |
+    <span class="text-nowrap">&copy; 2023 onalarmclocktimer</span>
+  </div>
+
+  <script src="/js/jquery.min.js?v=6"></script>
+  <script src="/js/lang/en.js?v=79"></script>
+  <script src="/js/main.js?v=79"></script>
+  <script src="/js/alarm.js?v=79"></script>
+  <script>
+    $(function () {
+      vAlarm.init();
+      App.init();
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-805SY1P8W9");
+  </script>
+</body>
+
+</html>

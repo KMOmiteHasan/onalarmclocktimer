@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Online clock. What time is it in different regions of United States, Canada, Australia, Europe and the World." />
+  <meta name="keywords"
+    content="online clock, exact time, what time, time now, world clock, time zone, clock, current time, accurate clock, clock app, free clock,onalarmclocktimer" />
+  <meta name="copyright" content="Copyright (c) Comfort Software Group" />
+  <meta property="og:title" content="What time is it - Exact time - Any time zone - onalarmclocktimer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="onalarmclocktimer" />
+  <meta property="og:url" content="/time/" />
+  <meta property="og:description"
+    content="Online clock. What time is it in different regions of United States, Canada, Australia, Europe and the World." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@onalarmclocktimer" />
+  <title>What time is it - Exact time - Any time zone - onalarmclocktimer</title>
+  <link rel="canonical" href="/time/" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="/img/favicons/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/img/favicons/android-chrome-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="/img/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#1565c0" />
+  <link rel="shortcut icon" href="/img/favicons/favicon.ico" />
+  <link rel="shortcut icon" sizes="192x192" href="/img/favicons/android-chrome-192x192.png" />
+  <link rel="shortcut icon" sizes="96x96" href="/img/favicons/android-chrome-96x96.png" />
+  <link rel="shortcut icon" sizes="72x72" href="/img/favicons/android-chrome-72x72.png" />
+  <link rel="shortcut icon" sizes="48x48" href="/img/favicons/android-chrome-48x48.png" />
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/img/favicons/browserconfig.xml" />
+  <meta name="author" content="Comfort Software Group" />
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <style id="color-style"></style>
+  <script>
+    function hideById(id) {
+      var x = document.getElementById(id);
+      if (x != null) x.style.display = "none";
+    }
+  </script>
+  <noscript>
+    <style>
+      #pnl-main {
+        height: auto;
+      }
+
+      #pnl-tools {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <!--[if lt IE 9
+      ]><style>
+        #pnl-tools,
+        .sb-content,
+        .container-fluid,
+        .am-logo {
+          display: none;
+        }
+        .dropdown-menu-right {
+          left: 0;
+          right: auto;
+        }
+        td {
+          padding: 0 12px;
+        }
+      </style><!
+    [endif]-->
+</head>
+
+<body>
+  <div id="pnl-full-screen" style="display: none"></div>
+  <div class="am-wrapper am-fixed-sidebar">
+    <nav class="navbar navbar-default navbar-fixed-top am-top-header">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="page-title">
+            <span>What time is it - Exact time - Any time zone - onalarmclocktimer</span>
+          </div>
+          <a href="javascript:;" class="am-toggle-left-sidebar navbar-toggle collapsed"><span
+              class="icon-bar"><span></span><span></span><span></span></span></a>
+          <a href="/" class="navbar-brand">onalarmclock<span>timer</span></a>
+        </div>
+        <a href="javascript:;" class="am-toggle-right-sidebar" title="Settings" data-toggle="tooltip"
+          data-placement="bottom"><span class="icon ci-config"></span></a>
+        <a href="javascript:;" data-toggle="collapse" data-target="#am-navbar-collapse"
+          class="am-toggle-top-header-menu collapsed"><span class="icon ci-angle-down"></span></a>
+        <div id="am-navbar-collapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right am-icons-nav">
+            <li class="dropdown">
+              <a href="javascript:;" role="button" title="Night Mode" data-toggle="tooltip" data-placement="bottom"
+                id="btn-night-mode"><span class="icon ci-contrast" id="icon-night-mode"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="am-left-sidebar">
+      <div class="content">
+        <div class="am-logo"></div>
+        <ul class="sidebar-elements">
+          <li class="parent">
+            <a href="/" id="link-alarm"><i class="icon ci-alarm"></i><span>Alarm&nbsp;Clock</span></a>
+          </li>
+          <li class="parent">
+            <a href="/timer/" id="link-timer"><i class="icon ci-timer"></i><span>Timer</span></a>
+          </li>
+          <li class="parent">
+            <a href="/stopwatch/"><i class="icon ci-stopwatch"></i><span>Stopwatch</span></a>
+          </li>
+          <li class="active">
+            <a href="/time/"><i class="icon ci-clock"></i><span>Time</span></a>
+          </li>
+          <li class="parent">
+            <a href="/pomodoro/"><i class="icon ci-timer"></i><span>Pomodoro</span></a>
+          </li>
+        </ul>
+        <!--Sidebar bottom content-->
+      </div>
+    </div>
+    <div class="am-content">
+      <div class="main-content">
+        <!-- Place for 1st ad -->
+        <div id="pnl-ne0n">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-ne0n">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <noscript>
+          <div class="row" id="pnl-noscript">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>
+                    For full functionality of this site it is necessary to
+                    enable JavaScript.
+                  </p>
+                  <a href="//www.enable-javascript.com/en/" target="_blank" rel="nofollow">Learn how to enable
+                    JavaScript</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </noscript>
+        <div class="row">
+          <div class="col-md-12 text-light" id="col-main">
+            <div class="panel panel-default" id="pnl-main" data-langtz="" data-tz="" data-title=""
+              data-utc="1689251683">
+              <div class="panel-tools" id="pnl-tools">
+                <span class="icon ci-share" title="Share" data-toggle="tooltip" id="btn-tool-share"></span>
+                <span class="icon ci-less" title="Decrease Font Size" data-toggle="tooltip" id="btn-font-minus"></span>
+                <span class="icon ci-plus2" title="Increase Font Size" data-toggle="tooltip" id="btn-font-plus"></span>
+                <span class="icon ci-expand1" title="Full Screen" data-toggle="tooltip" id="btn-full-screen"></span>
+                <span class="icon ci-collapse" title="Exit Full Screen" data-toggle="tooltip" style="display: none"
+                  id="btn-full-screen-exit"></span>
+              </div>
+              <noscript>
+                <div id="pnl-ns-time" style="
+                      display: block;
+                      position: relative;
+                      text-align: center;
+                      padding: 10px;
+                    ">
+                  <span id="lbl-ns-title" style="font-size: 24px">Time Now</span>
+                </div>
+              </noscript>
+              <div id="pnl-time" style="display: block; position: relative; text-align: center">
+                <span id="lbl-time" class="colored digit text-nowrap font-digit"
+                  style="font-size: 70px"><noscript>8:34:43 AM</noscript></span><span id="lbl-noon"
+                  class="colored digit text-nowrap font-digit"></span>
+              </div>
+              <h1 id="lbl-title" class="colored main-title" style="display: none; position: absolute">
+                Time Now
+              </h1>
+              <div id="lbl-date" class="colored digit-text text-center" style="display: block; position: absolute">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place for 2nd ad -->
+        <div id="pnl-ne0n">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-ne0n">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="row-clocks">
+          <div class="col-sm-4 col-md-3" id="col-add-clock">
+            <div class="panel panel-default panel-heading-fullwidth" style="position: relative; display: none"
+              id="pnl-add-clock">
+              <div class="text-center" style="
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 20%;
+                    margin: auto;
+                  " id="pnl-add-clock-center">
+                <button type="button" class="btn btn-space btn-classic btn-alt3" id="btn-add-clock">
+                  Add
+                </button>
+                <div id="pnl-clock-tools" style="display: none">
+                  <div class="tools">
+                    <a href="#" class="colored ext-link"><span class="icon ci-monitor" id="btn-open-clock"></span></a>
+                    <span class="dropdown">
+                      <span data-toggle="dropdown" class="icon ci-menu3 dropdown-toggle"></span>
+                      <ul role="menu" class="dropdown-menu dropdown-menu-right dropdown-colored">
+                        <li>
+                          <a href="javascript:;" class="pm-edit">Edit</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="javascript:;" class="pm-move-top">Move to Top</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="pm-move-up">Move Up</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="pm-move-down">Move Down</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                          <a href="javascript:;" class="pm-delete">Delete</a>
+                        </li>
+                      </ul>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="pnl-description">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1>Most Popular Time Zones and Cities</h1>
+              </div>
+              <div class="panel-body">
+                <table class="table-lr col-sm-6 col-md-4 col-lg-3">
+                  <tr>
+                    <td>
+                      <a href="/time/new-york-united-states/">New York</a>
+                    </td>
+                    <td>8:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/philadelphia-pennsylvania-united-states/">Philadelphia, Pennsylvania</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/chicago-illinois-united-states/">Chicago, Illinois</a>
+                    </td>
+                    <td>7:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/houston-texas-united-states/">Houston, Texas</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/san-antonio-texas-united-states/">San Antonio, Texas</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/dallas-texas-united-states/">Dallas, Texas</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/denver-colorado-united-states/">Denver, Colorado</a>
+                    </td>
+                    <td>6:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/los-angeles-california-united-states/">Los Angeles, California</a>
+                    </td>
+                    <td>5:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/san-diego-california-united-states/">San Diego, California</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/san-jose-california-united-states/">San Jose, California</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/phoenix-arizona-united-states/">Phoenix, Arizona</a>
+                    </td>
+                    <td>5:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/anchorage-alaska-united-states/">Anchorage, Alaska</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/adak-alaska-united-states/">Adak, Alaska</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/honolulu-hawaii-united-states/">Honolulu, Hawaii</a>
+                    </td>
+                    <td>2:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/toronto-canada/">Toronto, Canada</a>
+                    </td>
+                    <td>8:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/montreal-canada/">Montreal, Canada</a>
+                    </td>
+                  </tr>
+                </table>
+                <table class="table-lr col-sm-6 col-md-4 col-lg-3">
+                  <tr>
+                    <td>
+                      <a href="/time/winnipeg-canada/">Winnipeg, Canada</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/calgary-canada/">Calgary, Canada</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/vancouver-canada/">Vancouver, Canada</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/london-united-kingdom/">London, United Kingdom</a>
+                    </td>
+                    <td>1:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/dublin-ireland/">Dublin, Ireland</a>
+                    </td>
+                    <td>1:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/sydney-australia/">Sydney, Australia</a>
+                    </td>
+                    <td>10:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/melbourne-australia/">Melbourne, Australia</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/brisbane-australia/">Brisbane, Australia</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/perth-australia/">Perth, Australia</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/adelaide-australia/">Adelaide, Australia</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/wellington-new-zealand/">Wellington, New Zealand</a>
+                    </td>
+                    <td>12:34:43 AM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/manila-philippines/">Manila, Philippines</a>
+                    </td>
+                    <td>8:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/singapore-singapore/">Singapore, Singapore</a>
+                    </td>
+                    <td>8:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/tokyo-japan/">Tokyo, Japan</a></td>
+                    <td>9:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/shanghai-china/">Shanghai, China</a>
+                    </td>
+                    <td>8:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/urumqi-china/">Urumqi, China</a></td>
+                  </tr>
+                </table>
+                <table class="table-lr col-sm-6 col-md-4 col-lg-3">
+                  <tr>
+                    <td><a href="/time/seoul-korea/">Seoul, Korea</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/taipei-taiwan/">Taipei, Taiwan</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/berlin-germany/">Berlin, Germany</a>
+                    </td>
+                    <td>2:34:43 PM</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/zurich-germany/">Zurich, Germany</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/paris-france/">Paris, France</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/copenhagen-denmark/">Copenhagen, Denmark</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/rome-italy/">Rome, Italy</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/madrid-spain/">Madrid, Spain</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/ceuta-africa-spain/">Ceuta, Africa, Spain</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/canary-islands-spain/">Canary Islands, Spain</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/stockholm-sweden/">Stockholm, Sweden</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/lisbon-portugal/">Lisbon, Portugal</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/madeira-portugal/">Madeira, Portugal</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/azores-portugal/">Azores, Portugal</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/helsinki-finland/">Helsinki, Finland</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/athens-greece/">Athens, Greece</a></td>
+                  </tr>
+                </table>
+                <table class="table-lr col-sm-6 col-md-4 col-lg-3">
+                  <tr>
+                    <td>
+                      <a href="/time/istanbul-turkey/">Istanbul, Turkey</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/warsaw-poland/">Warsaw, Poland</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/kiev-ukraine/">Kiev, Ukraine</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/moscow-russia/">Moscow, Russia</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/jerusalem-israel/">Jerusalem, Israel</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/new-delhi-india/">New Delhi, India</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/kolkata-india/">Kolkata, India</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/noronha-brazil/">Noronha, Brazil</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/sao-paulo-brazil/">Sao Paulo, Brazil</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/rio-de-janeiro-brazil/">Rio de Janeiro, Brazil</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/time/manaus-brazil/">Manaus, Brazil</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/rio-branco-brazil/">Rio Branco, Brazil</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/mexico-city-mexico/">Mexico City, Mexico</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/santiago-chile/">Santiago, Chile</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/time/buenos-aires-argentina/">Buenos Aires, Argentina</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="pnl-help">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1>How to use the online clock</h1>
+              </div>
+              <div class="panel-body">
+                <p>
+                  On this website, you can find out the current time and date
+                  in any country and city in the world. You can also view the
+                  time difference between your location and that of another
+                  city.
+                </p>
+                <p>
+                  The home page displays the clock with the exact time in your
+                  region, as well as a pre-installed list of clocks for major
+                  cities. You can modify this list as you wish. For any city
+                  in the list, you can open a separate page with a clock by
+                  clicking on the title with the name of the city.
+                </p>
+                <p>
+                  You can configure the clock appearance (text color, type,
+                  and size), and these settings will be saved; they will be
+                  used when you open your web browser next time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place for 3rd ad -->
+        <div id="pnl-ne0n">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-ne0n">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="pnl-share" style="display: none">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body panel-share">
+                <div class="form-group xs-mb-10 sm-mb-15 xs-mt-0 sm-mt-5">
+                  <input class="form-control text-center" spellcheck="false" dir="ltr" id="edt-share" value="/time/" />
+                </div>
+                <ul>
+                  <li>
+                    <button onclick="share.popup('facebook')" title="Share to Facebook. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-facebook"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('twitter')" title="Share to Twitter. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-twitter"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('whatsapp')" title="Share to WhatsApp. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-whatsapp"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('blogger')" title="Share to Blogger. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-blogger"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('reddit')" title="Share to reddit. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-reddit"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('tumblr')" title="Share to Tumblr. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-tumblr"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('pinterest')" title="Share to Pinterest. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-pinterest"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('linkedin')" title="Share to LinkedIn. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-linkedin"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button onclick="share.popup('livejournal')" title="Share to LiveJournal. Opens in a new window."
+                      class="btn-share">
+                      <span class="share-icon share-icon-livejournal"></span>
+                    </button>
+                  </li>
+                  <li class="hidden-xs">
+                    <button data-toggle="modal" data-target="#form-embed" class="btn btn-primary btn-embed">
+                      Embed
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        hideById("pnl-noscript");
+        hideById("pnl-ns-time");
+        hideById("col-main");
+        hideById("pnl-description");
+        hideById("pnl-help");
+      </script>
+    </div>
+    <nav class="am-right-sidebar">
+      <div class="sb-content">
+        <div class="tab-panel">
+          <div class="tab-content">
+            <div class="tab-pane ticket active" id="tab0" role="tabpanel">
+              <div class="ticket-container">
+                <div class="ticket-wrapper am-scroller nano">
+                  <div class="am-scroller-ticket nano-content">
+                    <div class="content ticket-content">
+                      <h2>Settings</h2>
+                      <form>
+                        <div class="form-group options">
+                          <div class="field">
+                            <label>Digital Font</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-digital" />
+                                <span><label for="switch-digital"></label></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>12 hours (am/pm)</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-12hour" />
+                                <span><label for="switch-12hour"></label></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>Show Date</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-date" />
+                                <span><label for="switch-date"></label></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label>Night Mode</label>
+                            <div class="pull-right">
+                              <div class="switch-button switch-button-sm">
+                                <input type="checkbox" checked="" id="switch-night-mode" />
+                                <span><label for="switch-night-mode"></label></span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <label>Colors</label>
+                          <div class="panel-colors" id="pnl-colors"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btn-options-close">
+                          OK
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Clock Settings Form -->
+  <div id="form-edit" tabindex="-1" role="dialog" class="modal fade modal-colored-header">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
+              <i class="icon ci-close"></i>
+            </button>
+            <h3 class="modal-title">
+              <span id="lbl-add-clock">Add</span><span id="lbl-edit-clock">Edit</span>
+            </h3>
+          </div>
+          <div class="modal-body form">
+            <div class="form-group sm-mb-5">
+              <label for="edt-country">Country</label>
+              <select class="form-control" id="edt-country"></select>
+            </div>
+            <div class="form-group sm-mb-5">
+              <label for="edt-time-zone">Time zone</label>
+              <select class="form-control" id="edt-time-zone"></select>
+            </div>
+            <div class="form-group sm-mb-5">
+              <label for="edt-title">Title</label>
+              <input class="form-control" id="edt-title" value="" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="text-right col-xs-12">
+                <button type="button" data-dismiss="modal" class="btn btn-classic btn-default" id="btn-cancel">
+                  Cancel
+                </button>
+                <button type="button" data-dismiss="modal" class="btn btn-classic btn-alt3" id="btn-ok">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Embed Modal Dialog -->
+  <div id="form-embed" tabindex="-1" role="dialog" class="modal fade modal-colored-header">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
+              <i class="icon ci-close"></i>
+            </button>
+            <h3 class="modal-title">Embed</h3>
+          </div>
+          <div class="modal-body form bkg-lightgrey">
+            <div class="form-group">
+              <label for="edt-size">Size</label>
+              <select class="form-control" id="edt-size">
+                <option>Custom</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="edt-embed">HTML Code</label>
+              <textarea rows="4" class="form-control" spellcheck="false" dir="ltr" id="edt-embed"></textarea>
+            </div>
+            <div class="form-group hidden-xs xs-mb-0">
+              <label>Preview</label>
+              <div class="embed-preview"></div>
+            </div>
+          </div>
+          <div class="modal-footer bkg-lightgrey">
+            <div class="text-center">
+              <button type="button" data-dismiss="modal" class="btn btn-classic btn-default">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="am-footer">
+    <a href="/contacts/" rel="nofollow">Contacts</a>
+    | <a href="/terms/" rel="nofollow">Terms of use</a> |
+    <a href="/privacy/" rel="nofollow">Privacy</a> |
+    <span class="text-nowrap">&copy; 2023 onalarmclocktimer</span>
+  </div>
+
+  <script src="/js/jquery.min.js?v=6"></script>
+  <script src="/js/lang/en.js?v=79"></script>
+  <script src="/js/main.js?v=79"></script>
+  <script src="/js/tz/en.js?v=79"></script>
+  <script src="/lib/moment/moment.min.js?v=6"></script>
+  <script src="/lib/moment/moment-timezone-with-data-10-year-range.min.js?v=6"></script>
+  <script src="/js/timezones.min.js?v=6"></script>
+  <script src="/js/clock.js?v=79"></script>
+  <script>
+    $(function () {
+      vClock.init();
+      App.init();
+    });
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-805SY1P8W9");
+  </script>
+</body>
+
+</html>
